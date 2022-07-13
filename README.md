@@ -32,13 +32,13 @@ Nvidia-docker: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit
 Create a volume from terminal <br/>
 `$ docker volume create --driver local --opt type=none --opt device=/home/user/test --opt o=bind test_vol` <br/> 
 Create a volume in docker-compose file </br>
-`volumes:
+```volumes:
     bind-test: \
       driver: local \
       driver_opts: \
         type: none \
         o: bind \
-        device: /home/user/test \`
+        device: /home/user/test \```
 NOTE: In docker compose, volume doesn't create a local directory on the host. You have to make sure that the directory exists otherwise the mount will fail
 
 #### Docker save dependencies installed in an image
