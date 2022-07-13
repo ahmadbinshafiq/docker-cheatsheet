@@ -38,7 +38,9 @@ Create a volume in docker-compose file </br>
       driver_opts: \
         type: none \
         o: bind \
-        device: /home/user/test \```
+        device: /home/user/test \
+```
+
 NOTE: In docker compose, volume doesn't create a local directory on the host. You have to make sure that the directory exists otherwise the mount will fail
 
 #### Docker save dependencies installed in an image
