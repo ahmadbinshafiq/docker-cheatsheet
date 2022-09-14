@@ -43,6 +43,9 @@ Create a volume in docker-compose file </br>
 
 NOTE: In docker compose, volume doesn't create a local directory on the host. You have to make sure that the directory exists otherwise the mount will fail
 
+#### Accessing cv2 windows on Docker
+`$ xhost + && docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --device /dev/dri:/dev/dri -v volume/to/mount docker-image:tag`
+
 #### Docker save dependencies installed in an image
 First find container_id from `docker ps`  <br/>
 `$ docker commit [container_id]:[tag - optional]` <br/>
@@ -53,5 +56,8 @@ First find container_id from `docker ps`  <br/>
 
 #### Open interactive terminal of Docker images (Ubutu, PyTorch, etc)
 `$ docker run -it -v [absolute_path_to_our_files]:/[terminal_dir_name] --rm [image_name]` <br/>
+
+#### Get running docker container IP Address
+`$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name_or_id>` <br/>
 
 
