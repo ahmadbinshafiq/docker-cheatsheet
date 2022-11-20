@@ -60,7 +60,7 @@ First find container_id from `docker ps`  <br/>
 #### Get running docker container IP Address
 `$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name_or_id>` <br/>
 
-#### Remove all <none> images
+#### Remove all none images
 `$ docker rmi $(docker images -f dangling=true -q )` <br/>
 
 
