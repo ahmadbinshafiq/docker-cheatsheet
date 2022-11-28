@@ -63,4 +63,7 @@ First find container_id from `docker ps`  <br/>
 #### Remove all none images
 `$ docker rmi $(docker images -f dangling=true -q )` <br/>
 
+#### To remove all volumes attached
+`$ docker-compose down -v` <br/>
+
 
