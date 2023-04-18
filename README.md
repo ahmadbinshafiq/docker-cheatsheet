@@ -67,4 +67,4 @@ First find container_id from `docker ps`  <br/>
 `$ docker-compose down -v` <br/>
 
 #### Save a docker image to tar file
-docker save -o <tar_filename>.tar <image_name:tag>
+`$ docker save -o <tar_filename>.tar <image_name:tag>`
