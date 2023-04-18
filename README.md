@@ -66,4 +66,5 @@ First find container_id from `docker ps`  <br/>
 #### To remove all volumes attached
 `$ docker-compose down -v` <br/>
 
-
+#### Save a docker image to tar file
+docker save -o <tar_filename>.tar <image_name:tag>
